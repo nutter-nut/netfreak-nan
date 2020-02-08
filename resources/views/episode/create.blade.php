@@ -4,8 +4,9 @@
 
 @section('content')
 <div class="container mt-5">
-    <form class="py-4">
-        <form action="">
+
+        <form action="{{ url('/series/' . $serieId . '/episodes') }}" method="POST" class="py-4">
+            @csrf
             <div class="form-group">
                 <label for="title">ชื่อตอน</label>
                 <input
@@ -43,6 +44,6 @@
                 <button class="btn btn-primary">Create</button>
             </div>
         </form>
-    </div>
+
 </div>
 @endsection

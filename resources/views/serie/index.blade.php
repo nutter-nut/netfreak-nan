@@ -8,7 +8,17 @@
     <h1 class="py-5">รายการซีรีย์</h1>
 
     <ul class="">
-        <li><a href="#">serie->name โดย username update  เมื่อ yyyy-mm-dd</a></li>
+        
+        <!-- <a href="#">serie->name โดย username update  เมื่อ yyyy-mm-dd</a -->
+        @foreach($series as $serie)
+        <li>
+            <a href="{{ url('/series/'. $serie->id) }}">
+                {{ $serie->title }}
+                {{ $serie->episodes->count() }} ตอน
+            </a>
+        </li>
+        @endforeach
+        
     </ul>
 </div>
 
