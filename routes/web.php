@@ -38,7 +38,7 @@ Route::get('/series',function(){
 //แสดงฟอร์มสร้าง ซีรีย์/ตอน
 Route::get('/series/create',function(){
     return view('serie.create');
-});
+})->middleware('auth');
 
 Route::get('/series/{serieId}/episodes/create',function($serieId){
     return view('episode.create')->with(['serieId'=> $serieId]);
