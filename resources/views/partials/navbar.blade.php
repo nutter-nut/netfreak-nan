@@ -9,7 +9,15 @@
         <a role="button" class="btn btn-primary" href="{{url('/series/create')}}">สร้างซีรีย์ใหม่</a>
         
         <span class="ml-4 navbar-text">
-            แสดง username หรือ Guest
+
+        @auth
+        {{Auth::user()->name}}
+        @endauth
+
+        @guest
+        Guest
+        @endguest
+
         </span>
     </div>
 </nav>

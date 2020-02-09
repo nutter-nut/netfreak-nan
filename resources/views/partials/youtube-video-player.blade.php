@@ -3,7 +3,7 @@
 
 <div class="plyr__video-embed" id="video">
     <iframe
-        src="https://www.youtube.com/embed/5wDleGg9Igg?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+        src="https://www.youtube.com/embed/{{ $episode->file_name }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
         allowfullscreen
         allowtransparency
         allow="autoplay"
